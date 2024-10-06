@@ -1,0 +1,257 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+.successContainer {
+    font-family: Roboto-Regular;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.1);
+    visibility: hidden;
+    display: none;
+    visibility: hidden;
+    display: none;
+}
+
+.successBox {
+    margin: 0 auto;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    max-width: 450px;
+}
+
+#confirmImg {
+    margin-bottom: 24px;
+}
+
+.mainContainer {
+    display: block;
+    visibility: visible;
+}
+  
+body {
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: hsl(234, 29%, 20%);
+}
+
+h1 {
+    font-family: Roboto-Bold;
+    font-size: 3.5rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.newsletterBox {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px 20px 70px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    max-width: 1150px;
+  }
+
+.content {
+    align-items: center;
+}
+
+.leftContent {
+    padding-right: 50px;
+}
+
+.rightContent {
+    padding-right: 20px;
+    text-align: center; /* Add text-align center */
+  }
+
+#smallSignupImg {
+    display: none;
+    visibility: hidden;
+    width: 100%;
+}
+
+#bigSignupImg {
+    max-width: 100%;
+    padding-right: 12px;
+    height: auto;
+    display: block; /* Add display block */
+    margin: 0 auto; /* Add margin auto to center the image horizontally */
+}
+
+ul {
+    list-style-type: none;
+    line-height: 2;
+}
+
+#emailLabel {
+    font-family: Roboto-Bold;
+}
+
+.invalid-feedback {
+    text-align: end;
+}
+
+.is-invalid {
+    background-color: rgba(255, 0, 0, 0.25);
+    color: rgba(255, 0, 0, 0.88);
+}
+
+#email {
+    height: 54px;
+}
+
+#submitBtn {
+    background-color: hsl(235, 18%, 26%);
+    font-size: 1em;
+    transition-duration: 0.4s;
+    height: 50px;
+}
+
+#submitBtn:hover {
+    background-color: hsl(4, 100%, 67%);
+    border-color: hsl(4, 100%, 67%);
+}
+
+#dismissBtn {
+    background-color: hsl(235, 18%, 26%);
+    font-size: 1em;
+    transition-duration: 0.4s;
+}
+
+#dismissBtn:hover {
+    background-color: hsl(4, 100%, 67%);
+    border-color: hsl(4, 100%, 67%);
+}
+
+.rounded-corners {
+    border-radius: 10px;
+}
+
+ul li:before {
+    content: "";
+    display: inline-block;
+    width: 16px; /* Width of your custom bullet image */
+    height: 16px; /* Height of your custom bullet image */
+    background-image: url('./assets/images/icon-tick-sm.svg'); /* Path to your custom bullet image */
+    background-size: contain; /* Change to contain */
+    background-repeat: no-repeat; /* Add background-repeat */
+    margin-right: 12px; /* Optional spacing between bullet and list item text */
+}
+
+/*  ------------------------------------- MEDIA QUERIES ------------------------------------- */
+@media only screen and (max-width: 991.98px) {
+    h1 {
+        font-family: Roboto-Bold;
+        font-size: 2.5rem;
+    }
+    body {
+        font-size: 0.8em;
+    }
+    .leftContent {
+        padding-right: 25px;
+        padding-left: 0px;
+    }
+    ul {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    h1 {
+        font-family: Roboto-Bold;
+        font-size: 1.5rem;
+        margin-top: 12px;
+    }
+    body {
+        font-size: 0.7em;
+    }    
+    #email {
+        height: 35px;
+        font-size: 1.2em;
+    }
+    #submitBtn {
+        background-color: hsl(235, 18%, 26%);
+        font-size: 1em;
+    }
+    ul {
+        padding-left: 0;
+    }
+    #smallSignupImg {
+        display: inline;
+        visibility: visible;
+    }
+    #bigSignupImg {
+        display: none;
+        visibility: hidden;
+    }
+    .newsletterBox {
+        padding-left: 24px;
+        padding-right: 24px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .newsletterBox {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        width: auto;
+        height: auto;
+        min-height: 100vh;
+        margin: 0;
+      }
+      #contentBox {
+        padding-left: 24px;
+        padding-right: 40px;
+      }
+      main {
+        display: block;
+      }
+    .successBox {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        padding-top: 45%;
+    }
+    .successContainer {
+        padding: 0;
+    }
+    #dismissBtn {
+        margin-top: auto;
+        align-self: flex-end;
+    }
+    body {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 3rem;
+        padding-top: 12px;
+    }
+    #email {
+        height: 70px;
+    }
+    #submitBtn, #dismissBtn {
+        height: 75px;
+    }
+
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+
+  <main>
+    <!-- Sign-up form start -->
+    <div class="mainContainer px-0"> <!-- Remove padding by using "px-0" class -->
+      <div id="mainDiv" class="col-12 center-box">
+        <div class="newsletterBox mx-auto col-12 center-box">
+  
+          <div class="row content">
+            <div class="col-12 col-md-6 order-md-2"> <!-- Change column size and order for mobile devices -->
+              <img id="bigSignupImg" class="img-fluid" src="./assets/images/illustration-sign-up-desktop.svg" alt="signup Image">
+              <img id="smallSignupImg" class="img-fluid" src="./assets/images/illustration-sign-up-mobile.svg" alt="signup Image">
+            </div>
+            <div id="contentBox" class="col-12 col-md-6 order-md-1"> <!-- Change column size and order for mobile devices -->
+              <h1>Stay updated!</h1>
+  
+              <p>Join 60,000+ product managers receiving monthly updates on:</p>
+              <ul>
+                <li>Product discovery and building what matters</li>
+                <li>Measuring to ensure updates are a success</li>
+                <li>And much more!</li>
+              </ul> 
+  
+              <!-- Start of form -->
+              <div class="row">
+                <div class="col">
+                  <form method="POST" action="" id="signupForm" novalidate>
+                    <div class="row">
+                      <div class="col-6">
+                        <label id="emailLabel" for="email" class="form-label">Email address</label>
+                      </div>
+                      <div class="col-6">
+                        <span id="emailError" class="invalid-feedback">Valid email required</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <input type="email" id="email" placeholder="email@company.com" class="form-control rounded-corners mb-3" />
+                        <button id="submitBtn" type="submit" class="btn btn-secondary btn-lg w-100">Subscribe to monthly newsletter</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- End of form -->
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+  <div class="successContainer">
+    <div class="row">
+      <div class="col-12 center-box">
+        <div class="successBox mx-auto">
+              <img id="confirmImg" src="./assets/images/icon-success-lg.svg" />
+              <h1>Thanks for subscribing!</h1>
+
+              <p>A confirmation email has been sent to <b><span id="confirmedEmail"></span></b>. Please open it and click the button inside to confirm your subscription.</p>
+
+              <button id="dismissBtn" type="button" class="btn btn-secondary btn-lg w-100">Dismiss message</button>
+    </div>
+  </div>
+  <!-- Success message end -->
+</main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
